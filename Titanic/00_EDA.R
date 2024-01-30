@@ -5,7 +5,7 @@
 ###############################
 rm(list = ls());
 
-setwd("~/kaggle/Titanic/")
+# setwd("~/Titanic/")
 
 source("99_functions.R")
 

@@ -5,7 +5,26 @@
 ###############################
 rm(list = ls());
 
-setwd("~/kaggle/Titanic/")
+# setwd("~/Titanic/")
+
+package_list = c(
+  "data.table",
+  "ggplot2",
+  "foreach",
+  "pdftools",
+  "magrittr",
+  "gridExtra",
+  "corrplot",
+  "randomForest",
+  "xgboost"
+)
+
+# Install packages only if not already installed
+for (pkg in package_list) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    install.packages(pkg, dependencies = TRUE)
+  }
+}
 
 # load libraries and data
 library(data.table)
